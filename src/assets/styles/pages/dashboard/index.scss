@@ -81,20 +81,20 @@
           transform: translateY(-50%);
         }
       }
-      .toogle-box__body{
-        display: none;
-      }
-      .open{
-        display: flex;
-      }
     }
 
     .toogle-box--timeline,
     .toogle-box--messages {
+      .open{
+        display: flex;
+      }
       .toogle-box__body {
+        display: none;
+      }
+      .openBody {
+        display: block;
         margin-top: 0;
         overflow: hidden;
-
         .section-content {
           padding-top: 0;
         }
@@ -102,14 +102,19 @@
     }
 
     .toogle-box--timeline {
+      .open{
+        display: flex;
+      }
       .toogle-box__body {
+        display: none;
+      }
+      .openBody {
+        display: block;
         margin-top: 0;
         padding: 0 8px;
         padding-bottom: 14px;
-
         .section-content {
           padding-top: 0;
-
           .btn-border {
             max-width: calc(100% - 12px);
             margin: 0 6px;

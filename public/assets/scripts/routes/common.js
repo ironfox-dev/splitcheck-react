@@ -35,7 +35,6 @@ export default {
 //create campaign
 if (window.innerWidth < 576) {
   if ($('.nav-link--mobile').hasClass('nav-link--mobile')) {
-    
     $('.nav-link--mobile').not('.active').text('');
 
     if ($('.nav-link--mobile').hasClass('active')) {
@@ -46,13 +45,9 @@ if (window.innerWidth < 576) {
       $('.nav-link--mobile').text('');
       let textTarget = $(this).data('number');
       $(this).text(textTarget);
-     
     })
   }
 }
-
-
-    
 
      //select-placeholder
     $('.select-placeholder').on('select2:select', function (e) {
@@ -1755,7 +1750,6 @@ if (window.innerWidth < 576) {
           if (window.matchMedia('(max-width: 991px)').matches) {
             $('.admin-menu').css('top', '');
           }
-          
         }, false);
       }
 

@@ -167,7 +167,7 @@ const AdminDashboardEmptyContent = ({isOpen}) => {
                   </button>
                 </div>
               </div>
-              <div className={`toogle-box__body ${isCard1Open ? "open" : ""}`}>
+              <div className={`toogle-box__body ${isCard1Open && 'openBody'}`}>
                 <div className="toogle-box__scroll pl-24 pr-20">
                 </div>
               </div>
@@ -188,7 +188,7 @@ const AdminDashboardEmptyContent = ({isOpen}) => {
                   </button>
                 </div>
               </div>
-              <div className={`toogle-box__body ${isCard2Open ? "open" : ""}`}>
+              <div className={`toogle-box__body ${isCard2Open && 'openBody'}`}>
                 <div className="toogle-box__scroll pl-24 pr-20"></div>
               </div>
             </div>
