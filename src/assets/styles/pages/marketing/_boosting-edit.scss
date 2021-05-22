@@ -1,0 +1,14 @@
+.boosting-edit {
+  .aside-right {
+    margin-top: 17px;
+    @media (max-width: 991px) {
+      margin-top: 0;
+    }
+  }
+  .statistic-box {
+    .reaction__item-icon,
+    .reaction__list-icon {
+      cursor: auto;
+    }
+  }
+}

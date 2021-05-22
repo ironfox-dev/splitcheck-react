@@ -1,0 +1,66 @@
+//Glob Utils
+@import "../../variables";
+@import "../../mixins";
+@import "../../bootstrap-utils";
+
+.modal.right.modal-search-parameters {
+  @import "modal-components/hashtag";
+
+  .modal-content {
+    .modal-body {
+      padding: 24px;
+      .form__radio-wrap {
+        margin-bottom: 8px;
+      }
+      .form__note {
+        font-size: 16px;
+        padding-left: 0;
+        display: inline-block;
+        margin-top: 16px;
+        margin-bottom: 23px;
+        color: rgba(11, 2, 18, 0.75);
+      }
+      .form {
+        &__single--fluid,
+        &__other,
+        &__wrap {
+          max-width: 315px;
+
+          @media (max-width: 550px) {
+            max-width: calc(100% - 15px);
+          }
+        }
+
+        &__wrap {
+          .form__wrap-title {
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 22px;
+            font-weight: 500;
+          }
+          .form__checkbox-wrap {
+            &:last-of-type {
+              margin-bottom: 32px;
+            }
+          }
+        }
+
+        &__checkbox-wrap {
+          margin-bottom: 10px;
+        }
+
+        .scroll-div {
+          width: 100%;
+        }
+
+        .btn {
+          margin-left: auto;
+
+          @media (max-width: 550px) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

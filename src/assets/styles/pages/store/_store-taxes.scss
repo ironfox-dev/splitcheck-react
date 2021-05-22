@@ -1,0 +1,42 @@
+.taxes-empty {
+  .main__card {
+    @media (max-width: 991px) {
+      overflow: hidden;
+    }
+  }
+}
+.store {
+  &-taxes {
+    h1 {
+      i {
+        position: static !important;
+      }
+      @media (max-width: 991px) {
+        margin: auto;
+        max-width: 560px !important;
+      }
+    }
+    &__content {
+      .shipping-section {
+        p {
+          &:nth-child(2) {
+            @media (max-width: 385px) {
+              margin-right: 36px !important;
+            }
+            @media (max-width: 370px) {
+              margin-right: 10px !important;
+            }
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        margin: auto;
+      }
+    }
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

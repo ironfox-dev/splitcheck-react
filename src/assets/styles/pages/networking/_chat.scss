@@ -1,0 +1,152 @@
+.chat {
+  .filter {
+    filter: none !important;
+  }
+  main {
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
+  .form-add-comment {
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  .title-back {
+    @media (max-width: 991px) {
+      margin-bottom: 7px;
+    }
+  }
+  .search {
+    width: 100% !important;
+    @media (max-width: 1100px) {
+      padding: 0 8px;
+    }
+  }
+  .main-dash {
+    .left-column {
+      h3 {
+        span {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 991px) {
+        order: 1;
+      }
+    }
+    .right-column {
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+      @media (max-width: 767px) {
+        margin-left: -15px !important;
+        margin-right: -15px;
+        width: calc(100% + 30px);
+      }
+    }
+    .content-column {
+      @media (max-width: 991px) {
+        order: 3;
+      }
+    }
+  }
+  .right-column {
+    margin-left: 0;
+  }
+}
+
+.chat-invite {
+  box-shadow: 0 2px 4px 1px rgba(11, 2, 18, 0.08);
+  border-radius: 8px;
+  background-color: #ffff;
+  margin-bottom: 24px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    strong {
+      color: #0b0212;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: left;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    span {
+      color: #0b0212;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: left;
+    }
+  }
+  &__right {
+    min-width: 160px;
+  }
+  &__body {
+    padding-bottom: 8px;
+    .search {
+      max-width: 312px;
+      margin: 0 auto 30px;
+      @media (max-width: 991px) {
+        max-width: 100%;
+        width: calc(100% - 48px);
+      }
+    }
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 505px;
+    .ps__rail-y {
+      margin-top: 8px;
+      right: 8px;
+    }
+  }
+  &__single {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8px 54px 8px 24px;
+    &:nth-child(odd) {
+      background-color: #f8f9fb;
+    }
+    .profile-list__avatar {
+      border-radius: 0;
+      z-index: 0;
+      img {
+        border-radius: 50%;
+      }
+    }
+    .profile-list__status {
+      display: block;
+      min-width: 12px;
+      height: 12px;
+      border: 1px solid #fff;
+      background-color: #00a046;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      z-index: 55;
+    }
+    .profile-link {
+      .options {
+        right: 20px;
+      }
+      .btn-border {
+        min-width: 80px;
+        background-color: transparent;
+      }
+    }
+  }
+}

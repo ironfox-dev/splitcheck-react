@@ -1,0 +1,155 @@
+.abandoned {
+  // .abandoned__head
+
+  &__head {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  // .abandoned__body
+
+  &__body {
+    width: 100%;
+  }
+
+  // .abandoned__info
+
+  &__info {
+    &:last-of-type {
+      span {
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+
+  // .abandoned__list
+
+  // &__list {
+  // }
+
+  // .abandoned__item
+
+  &__item {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(2n - 1) {
+      .abandoned-card {
+        background-color: theme-color("light-gray2");
+      }
+    }
+  }
+
+  // .abandoned__card
+
+  // &__card {
+  // }
+
+  .user-info {
+    min-width: 52px;
+    width: auto;
+
+    @include media-breakpoint-up(lg) {
+      min-width: 150px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 25%;
+      min-width: 210px;
+    }
+  }
+
+  .toogle-box {
+    // .toogle-box__header
+
+    &__header {
+      padding: 4px;
+
+      @include media-breakpoint-up(lg) {
+        padding: 16px 8px;
+      }
+    }
+
+    // .toogle-box__header--left
+
+    &__header--left {
+      width: 100%;
+
+      > div {
+        &:nth-child(2) {
+          min-width: 55px;
+          margin-right: 140px;
+          @media (max-width: 1360px) {
+            min-width: 45px;
+            margin-right: 68px;
+          }
+          @media (max-width: 1199px) {
+            margin-right: 60px;
+          }
+          @media (max-width: 1099px) {
+            margin-right: 21px;
+          }
+        }
+        &:nth-child(3) {
+          min-width: 65px;
+        }
+      }
+    }
+
+    // .toogle-box__header--right
+
+    &__header--right {
+      min-width: 300px;
+      padding-right: 2px;
+
+      a {
+        &:first-of-type {
+          margin-right: 12px;
+        }
+
+        &:last-of-type {
+          max-width: 80px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .toogle-box__body{
+      display: none;
+    }
+    .open{
+      margin-top: 10px;
+      padding-bottom: 24px;
+      display: block;
+    }
+
+    // &__body {
+    // }
+  }
+
+  // .sort-box {
+
+  //   // .sort-box__line
+
+  //   &__line {
+  //   }
+
+  //   // .sort-box__name
+
+  //   &__name {
+  //   }
+
+  //   // .sort-box__select
+
+  //   &__select {
+  //   }
+
+  //   // .sort-box__arrow
+
+  //   &__arrow {
+  //   }
+  // }
+}

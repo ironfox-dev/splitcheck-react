@@ -1,0 +1,52 @@
+.order-subcard {
+  // .order-subcard__img
+
+  &__img {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .order-subcard__body
+
+  &__body {
+    padding-left: 32px;
+  }
+
+  // .order-subcard__title
+
+  &__title {
+    font-size: 16px;
+    line-height: 14px;
+    text-align: left;
+    padding-top: 5px;
+    margin-bottom: 3px;
+
+    font-weight: $font-weight-medium;
+    color: theme-color("dark-blue");
+  }
+
+  // .order-subcard__subitem
+
+  &__subitem {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+
+    font-weight: $font-weight-light;
+    color: theme-color("dark-blue");
+  }
+
+  // .order-subcard__calc-quantity
+
+  &__calc-quantity {
+    margin-top: auto;
+  }
+}

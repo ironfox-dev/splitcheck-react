@@ -1,0 +1,17 @@
+//Glob Utils
+@import "../../variables";
+@import "../../mixins";
+@import "../../bootstrap-utils";
+
+// Page Specific Components
+
+.modal-create-goss {
+  @import "modal-components/custom-form-for-modal-side";
+  @import "modal-components/create-banner";
+
+  .select2-container--default {
+    &:nth-of-type(2) {
+      margin-top: 16px;
+    }
+  }
+}

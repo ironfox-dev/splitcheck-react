@@ -1,0 +1,121 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+// @import "bootstrap";
+
+/** Utilities & Helpers */
+@import "utilities/position";
+
+/** Import theme styles */
+@import "mixins";
+@import "type";
+
+/** Import everything from autoload */
+@import "autoload/lazy";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~swiper/swiper-bundle.min.css";
+// @import "~select2/dist/css/select2.min.css";
+// @import "~simple-scrollbar/simple-scrollbar.css";
+// @import "~lightgallery/dist/css/lightgallery.min.css";
+// @import "~flatpickr/dist/flatpickr.min.css";
+// @import "~dropzone/dist/min/dropzone.min.css";
+// @import "~cropperjs/dist/cropper.min.css";
+// @import "~ion-rangeslider/css/ion.rangeSlider.css";
+// @import "~perfect-scrollbar/css/perfect-scrollbar.css";
+/**
+ * ==========
+ * Components
+ * ==========
+ * Components are reusable UI elements on pages, for example:
+ * - generic components can be buttons, navs, gallery slider
+ * - page-specific components such as testimonials
+ */
+//* main
+// @import "common/fonts";
+@import "common/icons";
+@import "common/smile";
+@import "common/buttons";
+@import "common/global";
+@import "common/ie-fix";
+@import "common/form";
+
+//* plugins
+@import "components/plugins/custom-scroll";
+@import "components/plugins/flatpickr-custom";
+@import "components/plugins/select-custom";
+@import "components/plugins/light-gallery";
+@import "components/plugins/dropzone-custom";
+// @import "components/plugins/ion-rangeslider-custom";
+
+//* shared components
+@import "components/perfect-scrollbar-custom";
+@import "components/table-default";
+@import "components/options";
+@import "components/drop-photo";
+@import "components/theme-background";
+@import "components/shadow-box";
+@import "components/list-green";
+@import "components/grid-gallery";
+@import "components/internal-card";
+@import "components/timeline";
+@import "components/card-timeline";
+@import "components/admin-menu";
+@import "components/new-item";
+@import "components/other-links";
+@import "components/personal-card";
+@import "components/reaction";
+@import "components/section-content";
+@import "components/product-card";
+@import "components/messages";
+@import "components/gift-shopping";
+@import "components/static-box";
+@import "components/tabs";
+@import "components/profile-list";
+@import "components/notifications";
+@import "components/avatar";
+@import "components/toogle-box";
+@import "components/user-info";
+@import "components/drag-drop";
+@import "components/right-section";
+@import "components/preferences";
+@import "components/keywords";
+@import "components/useful-info";
+@import "components/comments";
+
+/**
+ * ==========
+ * Layouts
+ * ==========
+ * Layouts define the scaffold of the application
+ * such as header, footer
+ */
+@import "layouts/header";
+@import "layouts/admin-default";
+@import "layouts/footer";
+@import "layouts/mobile-menu";
+@import "layouts/menu-bottom";
+
+
+@import "pages/dashboard";
+
+@media (max-width: 991.98px) {
+    .admin-default .main-content {
+        padding-top: 0px;
+        flex-wrap: wrap;
+        padding-left: 0px !important;
+    }
+    .sidebar-show {
+        left: 0px;
+        z-index: 9991;
+    }
+    .sidebar-hide {
+        left: -100%;
+    }
+}
+
+

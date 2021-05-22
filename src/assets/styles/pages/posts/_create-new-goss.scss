@@ -1,0 +1,132 @@
+.create-new-goss {
+  position: relative;
+  padding: 24px 15px 0 15px;
+  box-shadow: 2px 2px 4px 1px rgba(11, 2, 18, 0.08);
+  border-radius: 8px;
+  background-color: #fff;
+  display: block;
+  @media (max-width: 991px) {
+    box-shadow: none !important;
+    padding-bottom: 80px;
+    padding-top: 0;
+  }
+  @media all and (-ms-high-contrast: none) {
+    > div,
+    h2,
+    strong {
+      position: relative;
+      z-index: 5;
+    } /* IE11 */
+  }
+
+  .bold,
+  b {
+    font-weight: 500;
+  }
+  h2 {
+    color: #335491;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+      display: block;
+      width: 100%;
+    }
+  }
+  .select-before {
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+  }
+  .form__single--fluid {
+    margin-bottom: 32px;
+  }
+  .form__label {
+    padding-left: 8px;
+  }
+  .form__single--max {
+    .count {
+      bottom: 0;
+    }
+  }
+  .form__wrap--location {
+    p {
+      padding-left: 12px;
+    }
+  }
+  .members__form {
+    margin-bottom: 32px;
+    > p {
+      opacity: 0.75;
+      color: #0b0212;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: left;
+      padding-top: 8px;
+      padding-left: 8px;
+      margin-bottom: 0;
+    }
+  }
+  > strong {
+    color: #335491;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    line-height: 22px;
+    text-align: left;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .goss-option-box {
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  &__footer {
+    position: sticky;
+    z-index: 99999;
+    left: 0;
+    right: -15px;
+    width: 100%;
+    bottom: 0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    @media (max-width: 991px) {
+      position: fixed;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+    }
+    &::before {
+      position: absolute;
+      left: -15px;
+      right: -15px;
+      top: 0;
+      bottom: 0;
+      content: "";
+      box-shadow: 0 0 4px 1px rgba(11, 2, 18, 0.08);
+      background-color: #fff;
+      z-index: 0;
+    }
+  }
+
+  .select2-selection--single {
+    padding-left: 8px !important;
+  }
+  .form__single {
+    input {
+      padding-left: 8px !important;
+    }
+  }
+  textarea {
+    padding-left: 8px !important;
+  }
+}

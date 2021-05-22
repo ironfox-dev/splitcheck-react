@@ -1,0 +1,21 @@
+.new-banner {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 5px;
+  &::after {
+    position: absolute;
+    content: url("../../images/icons/box-64px.svg");
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .icon {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

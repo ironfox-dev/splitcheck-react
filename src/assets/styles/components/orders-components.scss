@@ -1,0 +1,48 @@
+.orders {
+  // .orders__box--orange
+
+  &__box--orange {
+    .orders__line {
+      background-color: #f77d0e;
+    }
+  }
+
+  // .orders__box--green
+
+  &__box--green {
+    .orders__line {
+      background-color: #00a046;
+    }
+  }
+
+  // .orders__box--gray
+
+  &__box--gray {
+    .orders__line {
+      background-color: #d2d2d2;
+    }
+  }
+
+  // .orders__box--blue
+
+  &__box--blue {
+    .orders__line {
+      background-color: #4f7ccf;
+    }
+  }
+
+  // .orders__box--red
+
+  &__box--red {
+    .orders__line {
+      background-color: #ff3b3b;
+    }
+  }
+
+  &__line {
+    width: 8px;
+    height: 56px;
+    border-radius: 6px;
+    margin-right: 16px;
+  }
+}

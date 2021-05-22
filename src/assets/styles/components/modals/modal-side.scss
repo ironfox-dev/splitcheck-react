@@ -1,0 +1,199 @@
+//Glob Utils
+@import "../../variables";
+@import "../../mixins";
+@import "../../bootstrap-utils";
+
+//? modal main style
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+  position: fixed;
+  top: 0;
+  margin: auto;
+  width: 520px;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 0;
+  padding: 0;
+
+  .modal-header {
+    padding: 0 32px;
+    height: 88px;
+    z-index: 2;
+
+    background-color: theme-color("white");
+    box-shadow: $shadow-card;
+
+    @include media-breakpoint-down(md) {
+      padding: 0 16px;
+    }
+  }
+
+  .modal-body {
+    width: 100%;
+    height: calc(100% - 80px);
+    padding: 24px 34px 80px;
+
+    @include media-breakpoint-down(md) {
+      padding: 24px 24px 80px;
+    }
+  }
+
+  .modal-footer {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 80px;
+    z-index: 2;
+
+    background-color: theme-color("white");
+    box-shadow: $shadow-card2;
+  }
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog {
+  left: -520px;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
+
+  @include media-breakpoint-down(md) {
+    left: -100%;
+  }
+}
+
+.modal.left.fade.show .modal-dialog {
+  left: 0;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -520px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+
+  @include media-breakpoint-down(md) {
+    right: -100%;
+  }
+}
+
+.modal.right.fade.show .modal-dialog {
+  right: 0;
+}
+
+//? modal style for "add-timeline", "create goss"
+
+.head-modal-info {
+  width: 100%;
+
+  // .head-info__avatar
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-bottom: 0;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  // .head-info__symbol
+
+  &__symbol {
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    z-index: 1;
+
+    color: theme-color("white");
+  }
+
+  // .head-info__description
+
+  &__description {
+    width: calc(100% - 72px);
+    padding-right: 20px;
+  }
+
+  // .head-modal-info__avatar--no-img
+
+  &__avatar--no-img {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      background-color: theme-color("blue4");
+    }
+
+    img {
+      display: none;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+
+  // .head-info__name
+
+  &__name {
+    font-size: 18px;
+    letter-spacing: 0.64px;
+    line-height: 18px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+
+    color: theme-color("blue4");
+  }
+
+  // .head-info__subname
+
+  &__subname {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    margin-bottom: 0;
+
+    color: theme-color("dark-blue");
+  }
+
+  // .head-info__num
+
+  &__num {
+    margin-left: 3px;
+  }
+}

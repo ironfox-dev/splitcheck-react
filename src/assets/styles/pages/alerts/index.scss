@@ -1,0 +1,135 @@
+//Glob Utils
+@import "../../variables";
+@import "../../bootstrap-utils";
+
+// Page Specific Components
+@import "card-alerts";
+
+.alerts {
+  .main-content {
+    @media (max-width: 1020px) {
+      flex-direction: column;
+    }
+    @media (min-width: 1550px) {
+      padding-left: 130px !important;
+    }
+    .aside-right {
+      width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 528px;
+      }
+      @media (max-width: 1020px) {
+        max-width: 100%;
+      }
+    }
+    .main {
+      width: 100% !important;
+      max-width: 860px;
+      @media (max-width: 1550px) {
+        max-width: 100% !important;
+      }
+
+      .section-content {
+        margin-bottom: 32px;
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+          max-width: 550px;
+        }
+        @media (max-width: 1199px) {
+          max-width: 400px;
+        }
+        @media (max-width: 1020px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .reminders {
+    width: 100%;
+    padding: 0 25px 30px 5px;
+    // max-height: 550px;
+
+    @include media-breakpoint-up(lg) {
+      // max-height: calc(100vh - 75px);
+      padding-right: 30px;
+    }
+
+    // .reminders__item
+
+    &__item {
+      margin-bottom: 16px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .notification {
+    padding: 0;
+    &__wrap {
+      padding: 0 16px 16px 5px;
+      max-height: 550px;
+      @include media-breakpoint-up(lg) {
+        max-height: calc(100vh - 75px);
+      }
+    }
+  }
+
+  .avatar {
+    margin-right: 8px;
+
+    &:nth-of-type(5n + 5) {
+      margin-right: 0;
+
+      @media (max-width: 550px) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .reminders--empty,
+  .notification--empty {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.alerts-empty {
+  padding: 20px;
+
+  flex-direction: column;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
+
+  // .alerts-empty__img
+
+  &__img {
+    margin-bottom: 20px;
+    @include media-breakpoint-up(lg) {
+      margin-right: 30px;
+      // margin-bottom: 0;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+
+  // .alerts-empty__text
+  p,
+  .alerts-empty__text {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+      text-align: left;
+    }
+  }
+}

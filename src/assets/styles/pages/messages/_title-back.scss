@@ -1,0 +1,19 @@
+.title-back {
+  margin: 15px 0 20px 32px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 991px) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  img {
+    margin-right: 9px;
+  }
+  span {
+    color: #35558f;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}

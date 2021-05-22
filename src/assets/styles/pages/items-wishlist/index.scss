@@ -1,0 +1,75 @@
+//Glob Utils
+@import "../../variables";
+@import "../../bootstrap-utils";
+
+// Page Specific Components
+
+.items-wishlist-page {
+  .main-content {
+    min-height: calc(100vh - 100px);
+  }
+
+  .section-content {
+    &__title {
+      font-size: 18px;
+      letter-spacing: 0.8px;
+      line-height: 18px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      color: theme-color("blue4");
+      font-weight: $font-weight-medium;
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .items-wishlist {
+    // .items-wishlist__head
+
+    &__head {
+      @media (max-width: 991px) {
+        .sort-box {
+          &:first-of-type {
+            width: 100%;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .items-wishlist-empty {
+    width: 100%;
+    max-width: 340px;
+    padding-top: 30px;
+    margin: 0 auto;
+
+    @media (max-width: 991px) {
+      padding-top: 40px;
+      max-width: 250px;
+    }
+
+    // .items-wishlist-empty__img
+
+    &__img {
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+      }
+    }
+
+    // .items-wishlist-empty__text
+
+    &__text {
+      font-size: 18px;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,462 @@
+//Glob Utils
+@import "../../variables";
+@import "../../bootstrap-utils";
+
+@import "view-orders";
+@import "order-full-card";
+@import "calc-quantity";
+@import "order-card";
+@import "order-subcard";
+@import "main-card";
+@import "aside-card";
+
+.admin-orders {
+  .main-content {
+    min-height: calc(100vh - 100px);
+  }
+
+  .table {
+    .options {
+      top: 9px;
+      right: 20px;
+    }
+  }
+  .btn--no-active {
+    text-decoration: underline !important;
+  }
+
+  .order-full-card {
+    &__info {
+      // @media (max-width: 1070px) {
+      //   width: 100%;
+      //   margin-bottom: 6px;
+      // }
+
+      @media (max-width: 1070px) {
+        width: calc(100% - 45px);
+        margin-bottom: 0;
+      }
+    }
+    .user-info {
+      margin-right: 20px;
+      // @media (max-width: 1070px) {
+      //   // width: 100%;
+      //   margin-right: 0;
+      // }
+
+      @media (max-width: 1070px) {
+        width: 40px;
+        margin-right: 0;
+
+        &__avatar {
+          margin-right: 0;
+        }
+
+        &__text {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .order-subcard {
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 6px;
+    }
+  }
+
+  .main {
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+    }
+
+    @media (min-width: 1070px) {
+      width: 58%;
+    }
+
+    @media (max-width: 767px) {
+      overflow-x: hidden;
+      margin-left: -15px;
+      margin-right: -15px;
+      width: calc(100% + 30px);
+    }
+
+    &--fluid {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .section-content {
+      &__title {
+        padding-left: 16px;
+      }
+    }
+
+    .shadow-box {
+      padding: 9px 12px;
+
+      .form {
+        &__wrap {
+          margin-bottom: 0;
+        }
+
+        &__wrap-title,
+        &__label {
+          padding-left: 8px;
+        }
+
+        &__label {
+          margin-bottom: 0;
+        }
+
+        &__wrap-title {
+          margin-bottom: 9px;
+        }
+
+        &__textarea {
+          min-height: 120px;
+          max-height: 120px;
+          padding: 10px;
+        }
+
+        &__single {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .order-card {
+      @media (max-width: 1070px) {
+        padding: 14px;
+      }
+
+      &__title {
+        @media (max-width: 1070px) {
+          max-width: 185px;
+        }
+      }
+
+      &__wrap {
+        @media (max-width: 1070px) {
+          margin-left: -100px;
+        }
+      }
+    }
+  }
+
+  .aside-right {
+    padding-top: 24px;
+    padding-left: 0;
+
+    @include media-breakpoint-up(lg) {
+      min-width: 384px;
+      width: 50%;
+      padding-top: 5px;
+      padding-left: 24px;
+    }
+
+    @media (min-width: 1070px) {
+      width: 42%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 384px;
+      margin-left: auto;
+    }
+
+    .section-content {
+      margin-bottom: 12px;
+
+      @include media-breakpoint-up(xl) {
+        margin-left: auto;
+        max-width: 360px;
+      }
+
+      &__title {
+        padding-left: 16px;
+      }
+
+      .drag-drop {
+        padding-top: 12px;
+
+        &__desc {
+          padding-left: 25px;
+        }
+
+        &__list {
+          padding-left: 7px;
+        }
+
+        .search {
+          padding-left: 8px;
+        }
+
+        .card-alerts {
+          &__title {
+            @include media-breakpoint-up(lg) {
+              width: calc(100% + 150px);
+            }
+          }
+
+          &__right {
+            @include media-breakpoint-up(lg) {
+              margin-top: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .drag-drop-orders {
+    @media (max-width: 991px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .fixed-section {
+    @media (max-width: 991px) {
+      &.section-content {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .toogle-box {
+    width: 100%;
+  }
+}
+
+.admin-orders-edit {
+  .main {
+    @media (max-width: 991px) {
+      padding-bottom: 88px;
+    }
+  }
+}
+
+.admin-orders-refund {
+  .main {
+    @media (max-width: 991px) {
+      padding-bottom: 210px;
+    }
+  }
+}
+
+.admin-orders-fulfill {
+  .main {
+    .form-add-comment {
+      max-width: 100%;
+      position: relative;
+      left: 0;
+      bottom: auto;
+      z-index: 22;
+      background-color: #fff;
+      box-shadow: 0 0 30px 10px rgba(11, 2, 18, 0.08);
+      border-radius: 12px 12px 0 0;
+      padding: 15px;
+
+      @media (max-width: 991px) {
+        &__body {
+          height: 115px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        &__wrap {
+          border: 0;
+        }
+
+        &__body {
+          height: 38px;
+        }
+      }
+    }
+  }
+
+  .insert-drag-drop {
+    .section-content {
+      &__title {
+        margin-top: 24px;
+        padding-left: 16px;
+      }
+
+      &:nth-of-type(2) {
+        .right-section {
+          &__text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .toogle-box {
+    max-width: 100%;
+    box-shadow: 0 0 0;
+    border-radius: 8px;
+    background-color: transparent;
+    margin-bottom: 0;
+
+    @media (max-width: 767px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .gift-shopping__header {
+      &::after {
+        display: none;
+      }
+    }
+    &__header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px 1px rgb(11 2 18 / 8%);
+      border-radius: 8px;
+      padding: 20px 14px 20px 24px;
+    }
+
+    &__body {
+      min-height: 420px;
+      margin-top: 0;
+      padding-bottom: 0;
+      position: relative;
+      margin-bottom: -65px;
+      z-index: 1;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: -40px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 84, 145, 0.03);
+        filter: blur(20px);
+        z-index: 0;
+      }
+
+      .ps__rail-y:hover > .ps__thumb-y,
+      .ps__rail-y:focus > .ps__thumb-y,
+      .ps__rail-y.ps--clicking .ps__thumb-y,
+      .ps__rail-y {
+        right: 15px;
+      }
+
+      .ps__thumb-y {
+        right: 0;
+      }
+    }
+
+    .comments-scroll-box {
+      max-height: 500px;
+      padding: 16px 24px;
+      padding-right: 40px;
+    }
+
+    .comment {
+      &__content {
+        width: calc(100% - 87px);
+      }
+
+      &--replay {
+        .comment {
+          &__content {
+            width: calc(100% - 130px);
+          }
+        }
+      }
+    }
+
+    .comments {
+      &__item {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .aside-right {
+    @include media-breakpoint-up(lg) {
+      min-width: 350px;
+    }
+
+    .right-insert-drag-drop {
+      .section-content {
+        &:nth-of-type(2) {
+          .right-section {
+            &__text {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-orders-shop {
+  .main {
+    max-width: 560px;
+    @media (max-width: 991px) {
+      overflow-x: visible !important;
+    }
+    @media (max-width: 767px) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .section-content {
+      &__title {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__card {
+      margin-bottom: 24px;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 560px;
+      }
+    }
+
+    .reaction {
+      // .reaction__wrap-link
+
+      &__wrap-link {
+        &--last {
+          @include media-breakpoint-down(sm) {
+            width: 30%;
+          }
+        }
+
+        &--next-to-last {
+          @include media-breakpoint-down(sm) {
+            width: 62%;
+          }
+        }
+      }
+    }
+  }
+  .aside-right {
+    @include media-breakpoint-up(lg) {
+      min-width: 360px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 360px;
+      margin-left: auto;
+    }
+  }
+}

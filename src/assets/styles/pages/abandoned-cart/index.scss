@@ -1,0 +1,190 @@
+//Glob Utils
+@import "../../variables";
+@import "../../bootstrap-utils";
+
+// Page Specific Components
+@import "./abandoned";
+@import "./abandoned-card";
+
+.abandoned-cart {
+  .main-content {
+    min-height: calc(100vh - 100px);
+  }
+  .section-content {
+    &__title {
+      font-size: 18px;
+      letter-spacing: 0.8px;
+      line-height: 18px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      color: theme-color("blue4");
+      font-weight: $font-weight-medium;
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .abandoned {
+    // .abandoned__head
+
+    &__head {
+      @media (max-width: 991px) {
+        .sort-box {
+          &:first-of-type {
+            width: 100%;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 16px;
+      }
+    }
+
+    &__left {
+      display: flex;
+      align-items: center;
+      min-width: 290px;
+      margin-right: 130px;
+      @media (max-width: 1360px) {
+        min-width: 250px;
+        margin-right: 80px;
+      }
+      @media (max-width: 1199px) {
+        min-width: 222px;
+        margin-right: 70px;
+      }
+      @media (max-width: 1099px) {
+        min-width: 213px;
+        margin-right: 16px;
+      }
+      @media (max-width: 991px) {
+        min-width: auto;
+        margin-right: 15px;
+      }
+      .abandoned__info {
+        span {
+          font-weight: 400 !important;
+        }
+      }
+    }
+  }
+
+  .toogle-box {
+    margin-bottom: 8px;
+    &__header {
+      &.open {
+        .toogle-box__header--right {
+          a {
+            &:first-of-type {
+              display: none !important;
+            }
+          }
+          @media (max-width: 991px) {
+            padding-top: 16px;
+
+            a {
+              &:last-of-type {
+                max-width: 100%;
+                height: 40px;
+                margin-right: 0;
+                transform: scale(1);
+              }
+            }
+          }
+
+          @media (max-width: 767px) {
+            a {
+              &:last-of-type {
+                max-width: calc(100% - 24px);
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+      }
+
+      &--left {
+        @media (max-width: 991px) {
+          width: 100%;
+        }
+      }
+
+      &--right {
+        @media (max-width: 991px) {
+          width: 100%;
+          padding: 0;
+
+          transition: $transition-fast;
+
+          a {
+            &:last-of-type {
+              max-width: 100%;
+              height: 0;
+              transform: scale(0);
+            }
+          }
+
+          .arrow-open {
+            position: absolute;
+            top: 18.5px;
+            right: 10px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          a {
+            &:last-of-type {
+              max-width: calc(100% - 24px);
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 991px) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .abandoned-card {
+    @media (max-width: 767px) {
+      padding: 11px 16px 8px;
+    }
+
+    // .abandoned-card__info
+
+    &__info {
+      @media (max-width: 991px) {
+        width: calc(100% - 50px);
+      }
+    }
+
+    // .abandoned-card__title
+
+    &__title {
+      @media (max-width: 991px) {
+        width: 90%;
+      }
+    }
+
+
+    // .abandoned-card__btn
+
+    &__btn {
+      @media (max-width: 991px) {
+        padding-top: 7px;
+        min-width: 100%;
+
+        a {
+          max-width: 100%;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+//Glob Utils
+@import "../../variables";
+@import "../../bootstrap-utils";
+
+@import "~froala-editor/css/froala_editor.pkgd.min.css";
+@import "../../components/plugins/custom-froala";
+@import "store-shipping";
+@import "store-taxes";
+@import "store-payment";
+@import "store-staff";
+@import "store-settings";
+@import "store-manage";
+
+.store {
+  .admin-menu__link {
+    line-height: 25px;
+  }
+
+  &-manage {
+    .right {
+      .mini-post__comments {
+        @media (max-width: 480px) {
+          position: absolute;
+          right: 15px;
+        }
+      }
+    }
+    .open-full {
+      @media (max-width: 480px) {
+        position: absolute;
+        right: 15px;
+        height: 40px !important;
+        top: auto;
+        bottom: 5px;
+      }
+    }
+    .product-items-list__control {
+      @media (max-width: 991px) and (min-width: 575px) {
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 450px;
+      }
+    }
+    .mini-post__reaction,
+    .mini-post__comments {
+      span {
+        font-size: 14px;
+        color: #828282;
+      }
+    }
+    .gift-shopping__header {
+      padding: 0 !important;
+      .right {
+        @media (max-width: 991px) and (min-width: 575px) {
+          width: 100%;
+          margin-left: 0;
+          padding-left: 85px;
+        }
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .section-mobile {
+    display: none;
+    .section-mobile__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+  .store-shipping__content {
+    > p {
+      padding-left: 20px;
+      @media (max-width: 991px) {
+        padding-left: 0;
+      }
+    }
+  }
+  .main__card {
+    @media (max-width: 575px) {
+      padding: 0 !important;
+    }
+  }
+  .sort {
+    margin-left: 25px;
+    @media (max-width: 991px) {
+      margin-left: 0;
+    }
+  }
+}

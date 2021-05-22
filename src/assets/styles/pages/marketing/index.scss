@@ -1,0 +1,37 @@
+//Glob Utils
+@import "../../variables";
+@import "../../bootstrap-utils";
+
+// Page Specific Components
+
+@import "coupons";
+@import "create-coupon";
+@import "boosting";
+@import "boosting-edit";
+
+.hashtag {
+  &-boxes {
+    &__reserve {
+      span {
+        min-width: 58px;
+      }
+    }
+    &__other {
+      li {
+        span {
+          min-width: 60px;
+        }
+        b {
+          margin-left: 14px !important;
+        }
+      }
+    }
+    .sort-box {
+      &:nth-child(2) {
+        .hashtag-boxes__reserve {
+          margin-left: 33px;
+        }
+      }
+    }
+  }
+}

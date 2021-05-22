@@ -1,0 +1,113 @@
+//Glob Utils
+@import "../../variables";
+@import "../../mixins";
+@import "../../bootstrap-utils";
+
+.modal-invite {
+  padding-right: 0 !important;
+  .form__inputs {
+    .select-placeholder {
+      position: relative;
+      z-index: 9;
+      &.placeholder-none {
+        .placeholder {
+          opacity: 0 !important;
+        }
+      }
+
+      span.placeholder {
+        position: absolute;
+        top: 30px;
+        left: 16px;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        color: #5b5661;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 19px;
+        pointer-events: none;
+        z-index: 99999;
+      }
+    }
+    .select2-container--focus {
+      z-index: 1 !important;
+      .placeholder {
+        opacity: 0 !important;
+      }
+    }
+  }
+  .modal-dialog {
+    max-width: 560px !important;
+  }
+  .modal-content {
+    padding: 25px 35px 32px 45px !important;
+    @media (max-width: 575px) {
+      padding: 25px 25px 32px 25px !important;
+    }
+  }
+  .modal-body {
+    padding-top: 25px !important;
+  }
+  .modal-footer {
+    padding-bottom: 0 !important;
+    margin-top: 40px;
+    a {
+      max-width: 160px !important;
+      height: 48px !important;
+      @media (max-width: 575px) {
+        max-width: 100% !important;
+      }
+      &:first-child {
+        margin-right: 16px;
+        @media (max-width: 575px) {
+          margin-bottom: 16px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .btn-blue {
+    font-size: 18px !important;
+  }
+  .form__single {
+    margin-bottom: 0 !important;
+    max-width: 100%;
+  }
+  .form__single--select {
+    margin-top: 30px;
+  }
+  .search__button {
+    z-index: 99999;
+    top: 70%;
+  }
+  &__line {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 16px;
+    &::after,
+    &::before {
+      content: "";
+      max-width: 139px;
+      height: 1px;
+      background-color: #99a9c9;
+      width: 100%;
+    }
+    span {
+      color: #99a9c9;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.86px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+  h1 {
+    color: #0b0212;
+    font-size: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
